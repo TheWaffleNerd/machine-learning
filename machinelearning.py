@@ -74,7 +74,7 @@ def add_parameter_ui(clf_name):
 params = add_parameter_ui(classifier_name)
 
 
-clf = get_classifier(clf_name, params)
+clf = get_classifier(classifier_name, params)
 
 x_train, x_text, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 1234)
 clf.fit(x_train, y_train)
