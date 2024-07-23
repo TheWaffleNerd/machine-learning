@@ -1,2 +1,6 @@
 streamlit
-streamlit agraph
+streamlit_agraph
+pandas
+numpy
+scikit-learn
+matplotlib
