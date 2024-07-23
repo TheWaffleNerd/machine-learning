@@ -25,7 +25,7 @@ dataset_name = st.sidebar.selectbox(
 
 st.write(f"## {dataset_name} Dataset")
 
-classifier_name = st.siderbar.selectbox(
+classifier_name = st.sidebar.selectbox(
   'Select Classifier',
   ('K Nearest Neighbor', 'Support Vector Machine', 'Random Forest')
 )
