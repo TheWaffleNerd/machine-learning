@@ -51,7 +51,7 @@ def get_classifier(clf_name, params):
   if clf_name == 'Support Vector Machine':
     clf = SVC(C = params['C'])
   elif clf_name == 'K Nearest Neighbor':
-    clf = KNearestNeighbors(n_neighbors = params['K'])
+    clf = KNeighborsClassifer(n_neighbors = params['K'])
   else:
     clf = RandomForestClassifier(n_estimators = params['n_estimators'],
                                 max_depth = params['max_depth'], random_state = 1234)
