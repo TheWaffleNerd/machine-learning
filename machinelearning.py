@@ -105,6 +105,6 @@ st.pyplot(fig)
 
 st.write(f'##{dataset_name}Details')
 st.dataframe(X)
-st.write(X.columns)
+X.rename(columns={'1': 'New'}, inplace=True)
 
 st.dataframe(data.target_names)
