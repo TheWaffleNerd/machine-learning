@@ -38,12 +38,12 @@ def get_dataset(name):
     data = datasets.load_wine()
   else:
     data = datasets.load_breast_cancer()
-  x = data.data
+  X = data.data
   y = data.target
-  return x, y, data
+  return X, y, data
 
-x, y, data = get_dataset(dataset_name)
-st.write('Shape of dataset:', x.shape)
+X, y, data = get_dataset(dataset_name)
+st.write('Shape of dataset:', X.shape)
 st.write('Number of classes', len(np.unique(y)))
 
 def get_classifier(clf_name, params):
@@ -77,9 +77,9 @@ params = add_parameter_ui(classifier_name)
 
 clf = get_classifier(classifier_name, params)
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 1234)
-clf.fit(x_train, y_train)
-y_pred = clf.predict(x_test)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 1234)
+clf.fit(X_train, y_train)
+y_pred = clf.predict(X_test)
 
 acc = accuracy_score(y_test, y_pred)
 
@@ -87,10 +87,10 @@ st.write(f'Classifier = {classifier_name}')
 st.write(f'Accuracy =', acc)
 
 pca = PCA(2)
-x_projected = pca.fit_transform(x)
+X_projected = pca.fit_transform(X)
 
-x1 = x_projected[:,0]
-x2 = x_projected[:,1]
+x1 = X_projected[:,0]
+x2 = X_projected[:,1]
 
 fig = plt.figure()
 plt.scatter(x1, x2,
