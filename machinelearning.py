@@ -105,5 +105,6 @@ st.pyplot(fig)
 
 st.write(f'##{dataset_name}Details')
 st.dataframe(X)
+st.write(X.columns)
 
-st.dataframe(data.data_names)
+st.dataframe(data.target_names)
