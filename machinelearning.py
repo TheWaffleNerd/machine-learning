@@ -55,7 +55,7 @@ def get_classifier(clf_name, params):
   else:
     clf = RandomForestClassifier(n_estimators=params['n_estimators'],
                                 max_depth=params['max_depth'], random_state=1234)
-    return clf
+  return clf
 
 def add_parameter_ui(clf_name):
   params = dict()
