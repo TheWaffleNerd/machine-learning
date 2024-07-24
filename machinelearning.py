@@ -104,8 +104,6 @@ plt.colorbar()
 st.pyplot(fig)
 
 st.write(f'##{dataset_name}Details')
-st.dataframe(X)
+st.dataframe(data)
 
 st.dataframe(data.target_names)
-
-st.write(X.columns.tolist())
