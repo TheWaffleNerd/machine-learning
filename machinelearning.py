@@ -108,3 +108,4 @@ st.dataframe(X)
 
 st.dataframe(data.target_names)
 
+st.write(data.columns.tolist())
