@@ -110,4 +110,7 @@ elif dataset_name == 'Wine':
   data1 = datasets.load_wine(as_frame=True)
 else:
   data1 = datasets.load_breast_cancer(as_frame=True)
-st.dataframe(data1)
+st.dataframe(data1.data)
+
+st.title(f"{dataset_name} Dataset Targets")
+st.dataframe(data.target_names)
