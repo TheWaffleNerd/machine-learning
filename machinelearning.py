@@ -51,10 +51,10 @@ def get_classifier(clf_name, params):
   if clf_name == 'Support Vector Machine':
     clf = SVC(C = params['C'])
   elif clf_name == 'K Nearest Neighbor':
-    clf = KNeighborsClassifier(n_neighbors = params['K'])
+    clf = KNeighborsClassifier(n_neighbors=params['K'])
   else:
-    clf = RandomForestClassifier(n_estimators = params['n_estimators'],
-                                max_depth = params['max_depth'], random_state = 1234)
+    clf = RandomForestClassifier(n_estimators=params['n_estimators'],
+                                max_depth=params['max_depth'], random_state=1234)
     return clf
 
 def add_parameter_ui(clf_name):
@@ -70,6 +70,7 @@ def add_parameter_ui(clf_name):
     params['max_depth'] = max_depth
     n_estimators = st.sidebar.slider('n_estimators', 1, 100)
     params['n_estimators'] = n_estimators
+  return params
 
 params = add_parameter_ui(classifier_name)
 
