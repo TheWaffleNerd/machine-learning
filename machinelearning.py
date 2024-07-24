@@ -111,4 +111,4 @@ st.write(X)
 st.write(y)
 st.write(data)
 
-st.dataframe(data.target_names)
+st.dataframe(data.data_names)
